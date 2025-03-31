@@ -1,0 +1,1 @@
+docker run -d -p 5432:5432 --name cms-postgres -v ./db:/var/lib/postgresql/data -e POSTGRES_PASSWORD=123123 -e POSTGRES_USER=postgres -e POSTGRES_DB=cms-db postgres

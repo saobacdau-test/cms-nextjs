@@ -12,6 +12,7 @@ export async function Footer() {
   const footerData: Footer = await getCachedGlobal('footer', 1)()
 
   const navItems = footerData?.navItems || []
+  console.log(navItems)
 
   return (
     <footer className="mt-auto border-t border-border bg-black dark:bg-card text-white">

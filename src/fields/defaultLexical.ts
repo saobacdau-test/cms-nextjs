@@ -6,15 +6,18 @@ import {
   ParagraphFeature,
   lexicalEditor,
   UnderlineFeature,
+  AlignFeature,
 } from '@payloadcms/richtext-lexical'
 
 export const defaultLexical: Config['editor'] = lexicalEditor({
-  features: () => {
+  features: ({ defaultFeatures, rootFeatures }) => {
     return [
-      ParagraphFeature(),
-      UnderlineFeature(),
-      BoldFeature(),
-      ItalicFeature(),
+      ...defaultFeatures,
+      // ParagraphFeature(),
+      // UnderlineFeature(),
+      // BoldFeature(),
+      // ItalicFeature(),
+      // AlignFeature(),
       LinkFeature({
         enabledCollections: ['pages', 'posts'],
         fields: ({ defaultFields }) => {

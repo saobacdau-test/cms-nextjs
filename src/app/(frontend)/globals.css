@@ -13,34 +13,37 @@
     font-weight: auto;
   }
 
+  /* ────────────────────────────── */
+  /* LIGHT THEME (default) */
+  /* ────────────────────────────── */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* overall backgrounds & foreground text */
+    --background: 198 100% 94%; /* #DFF5FF */
+    --foreground: 222 84% 5%; /* nearly black */
 
-    --card: 240 5% 96%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 198 100% 94%;
+    --card-foreground: 222 84% 5%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 198 100% 94%;
+    --popover-foreground: 222 84% 5%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Actionable / interactive elements */
+    --primary: 239 100% 35%; /* darkened #5356FF */
+    --primary-foreground: 0 0% 100%; /* white */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 211 79% 35%; /* darkened #378CE7 */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 194 69% 40%; /* darkened #67C6E3 */
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* leave destructive & neutrals as desired */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: 240 6% 80%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --input: 214 32% 91%;
+    --ring: 222 84% 5%;
 
     --radius: 0.2rem;
 
@@ -49,34 +52,37 @@
     --error: 10 100% 86%;
   }
 
+  /* ────────────────────────────── */
+  /* DARK THEME (inverted roles) */
+  /* ────────────────────────────── */
   [data-theme='dark'] {
-    --background: 0 0% 0%;
-    --foreground: 210 40% 98%;
+    /* Overall dark backgrounds with light text */
+    --background: 222 47% 5%; /* a very dark blue/gray */
+    --foreground: 0 0% 100%; /* white */
 
-    --card: 0 0% 4%;
-    --card-foreground: 210 40% 98%;
+    --card: 222 47% 10%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 222 47% 10%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* In dark mode we “invert” the button colors:
+       now the backgrounds become light, with dark text. */
+    --primary: 239 100% 65%; /* lighter variant of #5356FF */
+    --primary-foreground: 222 84% 5%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 211 79% 65%; /* lighter variant of #378CE7 */
+    --secondary-foreground: 222 84% 5%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 194 69% 60%; /* lighter variant of #67C6E3 */
+    --accent-foreground: 222 84% 5%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 222 84% 5%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 0, 0%, 15%, 0.8;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 222 47% 10%;
+    --input: 222 47% 10%;
+    --ring: 222 84% 5%;
 
     --success: 196 100% 14%;
     --warning: 34 51% 25%;

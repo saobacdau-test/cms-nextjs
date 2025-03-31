@@ -17,10 +17,22 @@ import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
 
+import { en } from '@payloadcms/translations/languages/en'
+import { vi } from '@payloadcms/translations/languages/vi'
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
+  // localization: {
+  //   locales: ['en', 'vn'],
+  //   defaultLocale: 'en',
+  //   // fallback: true
+  // },
+  i18n: {
+    fallbackLanguage: 'vi',
+    supportedLanguages: { vi, en },
+  },
   admin: {
     components: {
       // The `BeforeLogin` component renders a message that you see while logging into your admin panel.
@@ -34,6 +46,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
     user: Users.slug,
+
     livePreview: {
       breakpoints: [
         {
