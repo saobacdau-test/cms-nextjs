@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   payload:
     image: node:18-alpine
@@ -19,12 +17,26 @@ services:
     image: mongo:latest
     ports:
       - '27017:27017'
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=cms-db
     command:
       - --storageEngine=wiredTiger
     volumes:
       - data:/data/db
     logging:
       driver: none
+
+  mongo-express:
+    image: mongo-express
+    ports:
+      - '8081:8081'
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSER=admin
+      - ME_CONFIG_MONGODB_ADMINPASS=password
+    depends_on:
+      - mongo
 
 volumes:
   data:
